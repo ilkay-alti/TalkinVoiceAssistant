@@ -79,7 +79,7 @@ def response(voice):
         if "facebook" in voice:
             print("what do you want me to call from facebook")
             time.sleep(0.5)
-            ara = "girl"
+            ara = record("listen")
             print("Facebook search " + ara)
             time.sleep(0.3)
             browser = webdriver.Chrome("/home/ilkayus/Desktop/sesss/chromedriver")
