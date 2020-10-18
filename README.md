@@ -7,6 +7,7 @@ A silly talking assistant app (upgradeable)
 
 ```bash
 git clone https://github.com/ilkay-alti/TalkinVoiceAssistant.git
+pip3 install VoiceAsistant-ilkayus
 ```
 
 ## Start Assistant
