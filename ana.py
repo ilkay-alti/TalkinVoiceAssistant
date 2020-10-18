@@ -42,14 +42,14 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-import feedparser #haber
+import feedparser 
 
-import requests #hava durumu
+import requests 
 import wikipedia
-from googletrans import Translator #translate
-from googletrans import LANGUAGES #diller
+from googletrans import Translator 
+from googletrans import LANGUAGES 
 
-def speaktr(string):  # ses dosyası olusturdu ve caldı
+def speaktr(string):  
     tts = gTTS(string,lang="tr")
     rand = random.randint(1,10000)
     file = 'audio-'+str(rand)+'.mp3'
@@ -57,7 +57,7 @@ def speaktr(string):  # ses dosyası olusturdu ve caldı
     playsound.playsound(file)
     os.remove(file)
 
-def speak(string):  # ses dosyası olusturdu ve caldı
+def speak(string):  
     tts = gTTS(string,lang="en")
     rand = random.randint(1,10000)
     file = 'audio-'+str(rand)+'.mp3'
@@ -65,7 +65,7 @@ def speak(string):  # ses dosyası olusturdu ve caldı
     playsound.playsound(file)
     os.remove(file)
        
-def record(ask=False):  #konustugum metnı algıladı
+def record(ask=False):  
     r = sr.Recognizer()
     with sr.Microphone() as source:
         if ask:
@@ -288,14 +288,14 @@ def bos(voice):
         speak("my family goes to the calculator")
 
 
-speaktr("hi how can i help you")
+speak("hi how can i help you")
 
 
 while 1:
-    voice = record("listen")  #kucuk harfe donusturdu gelen ses dosyasındakı verıyı
+    voice = record("listen")  
     time.sleep(0.5)
     print("Söyledigin kelime : "+voice)
-    voice=voice.lower() #kucuk har yaptı hepsını
+    voice=voice.lower() 
 
     selamla(voice)
     response(voice)
