@@ -22,32 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 '''
 
-
-import os
-import sys
-import time
-import playsound
-import random
-import speech_recognition as sr 
-import webbrowser
-import time
-
-import random
-from datetime import datetime
-from gtts import gTTS
-
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-import feedparser 
-
-import requests 
-import wikipedia
-from googletrans import Translator 
-from googletrans import LANGUAGES 
+import VoiceAsistant-ilkayus 
 
 def speaktr(string):  
     tts = gTTS(string,lang="tr")
